@@ -14,6 +14,7 @@ import org.springframework.util.CollectionUtils;
  * @author dingpc
  */
 public class BeanCopyUtils {
+	
 	private static final org.slf4j.Logger logger = LoggerFactory.getLogger(BeanCopyUtils.class);
 
 	/**
@@ -108,7 +109,7 @@ public class BeanCopyUtils {
 		}
 		List<T> targets = new ArrayList<T>();
 		for (V v : from) {
-			T target = convertClass(v, to, ignoreProperties);
+			T target = convertClass(v, to, ignoreProperties, converter);
 			if (target == null) {
 				continue;
 			}
