@@ -1,4 +1,4 @@
-package com.dd.util;
+package com.dd.util.result;
 
 import java.io.Serializable;
 
@@ -28,7 +28,7 @@ public class UnifiedResult<T> implements Serializable {
 	 * @param data
 	 *            对应数据
 	 */
-	public UnifiedResult(StatusCodeEnum statusCode, T data) {
+	protected UnifiedResult(StatusCodeEnum statusCode, T data) {
 		super();
 		this.stateCode = statusCode.getCode();
 		this.retMessage = statusCode.getMessage();
